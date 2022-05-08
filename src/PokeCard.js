@@ -7,7 +7,7 @@ import { Heart, HeartFill } from 'react-bootstrap-icons';
 const PokeCard = ({ name, image, pokemonName, type, fav, favClick  }) => {
   return (
     <Card bg="dark" text="light" key={name}>
-      <Card.Header className="d-flex justify-content-between">{name} 
+      <Card.Header className="d-flex justify-content-between text-capitalise">{name} 
         {fav ? (
           <HeartFill onClick={favClick} color="red" />
         ): (
@@ -16,8 +16,14 @@ const PokeCard = ({ name, image, pokemonName, type, fav, favClick  }) => {
       </Card.Header>
       <Card.Body>
         <Card.Img variant="top" src={image} />
+
+        <Card.Text className="pokemon-type mt-2">
+             Type: {type}
+              
+        </Card.Text>
+
         <LinkContainer to={`/${pokemonName}`}>
-          <Button variant="outline-secondary" size='sm'>Details</Button>
+          <Button className="details-btn" variant="outline-secondary mt-4" size='md'>Details</Button>
         </LinkContainer>
       </Card.Body>
     </Card>

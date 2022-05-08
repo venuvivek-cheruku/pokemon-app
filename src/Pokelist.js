@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import PokeCard from "./PokeCard";
 import Loader from "./Loader";
 import { Button } from "react-bootstrap";
+import { type } from "@testing-library/user-event/dist/type";
 
 const PokeList = ({ favHandler, favourites }) => {
   const [pokemons, setPokemons] = useState([]);
@@ -42,20 +43,20 @@ const PokeList = ({ favHandler, favourites }) => {
   };
 
   return (
-    <div>
-      <div className="search-bar-container mt-5">
+    <div className="main-container">
+      <div className="search-bar-container p-5">
         <h5 className="me-3 mb-0"> Search Your Desire Pokemon</h5>
       <input type="text"  placeholder="Search Pokemon" onChange={(event) => {
                 setSearchTerm(event.target.value)
             }}/>
       </div>
 
-      <Container>
+      <Container className="pokemon-grid-container">
         <Row
           xs={2}
           md={4}
           lg={5}
-          className="justify-content-between my-5 d-flex gap-3"
+          className="justify-content-between d-flex gap-4"
         >
           {isLoading && <Loader />}
           {!isLoading &&
@@ -72,6 +73,7 @@ const PokeList = ({ favHandler, favourites }) => {
                 key={pokemon.name}
                 name={pokemon.name}
                 image={pokemon.sprites.other.dream_world.front_default}
+                type={pokemon.types[0].type.name}
                 // {pokemon.sprites.other.home.front_default}
                 pokemonName={pokemon.name}
                 fav={favourites ? favourites.some(item => item.name === pokemon.name): 'favourites is empy'}
