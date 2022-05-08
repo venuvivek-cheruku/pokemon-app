@@ -55,7 +55,7 @@ const PokeList = ({ favHandler, favourites }) => {
         <Row
           xs={2}
           md={4}
-          lg={5}
+          lg={6}
           className="justify-content-between d-flex gap-4"
         >
           {isLoading && <Loader />}
@@ -84,7 +84,7 @@ const PokeList = ({ favHandler, favourites }) => {
         </Row>
       </Container>
       <div className="load-btn m-5">
-        <Button variant="danger"  size="lg" onClick={getPokemons}>
+        <Button variant="danger" onClick={getPokemons}>
         Load more
       </Button>
       </div>
