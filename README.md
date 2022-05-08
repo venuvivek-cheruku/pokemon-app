@@ -21,14 +21,14 @@ Get 20 Pokemons at a time from the API. Next and prev buttons perform a new call
 ## Screenshot:
 
 Version 1:
-![screenshot](screenshot.png?raw=true "Screenshot of the first version of Pokédex app")
+<!-- ![screenshot](screenshot.png?raw=true "Screenshot of the first version of Pokédex app") -->
 
 ## To do:
 - [x] empty favourites list
 - [ ] compute weak against based on type
 
 ## known bugs:
-- [ ] localStorage can only hold an amount of characters, after some pokemons are added to favourites, it crashes. Bug found, as always, by my child, the greatest tester ever. If you are interesting in hiring, contact me :D
+- None
 
 ## Credits:
 - Pokemon API: https://pokeapi.co/api/v2/pokemon/ 
