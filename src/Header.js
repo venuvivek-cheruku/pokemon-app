@@ -1,6 +1,6 @@
 import React from "react";
 import { LinkContainer } from "react-router-bootstrap";
-import logo from './logo.png'; 
+import logo from "./logo.png";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -10,14 +10,14 @@ const Header = () => {
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
         <Navbar.Brand href="#home">
-        <img
-        src={logo}
-        width="30"
-        height="30"
-        className="d-inline-block align-top"
-        alt=" logo" 
-      /> Pokedex
-
+          <img
+            src={logo}
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+            alt=" logo"
+          />{" "}
+          Pokedex
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

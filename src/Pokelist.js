@@ -14,7 +14,7 @@ const PokeList = ({ favHandler, favourites }) => {
     "https://pokeapi.co/api/v2/pokemon?limit=50&offset=0"
   );
 
- const [searchTerm, setSearchTerm] = useState("")
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     getPokemons();
@@ -46,9 +46,13 @@ const PokeList = ({ favHandler, favourites }) => {
     <div className="main-container">
       <div className="search-bar-container p-5">
         <h5 className="me-3 mb-0"> Search Your Desire Pokemon</h5>
-      <input type="text"  placeholder="Search Pokemon" onChange={(event) => {
-                setSearchTerm(event.target.value)
-            }}/>
+        <input
+          type="text"
+          placeholder="Search Pokemon"
+          onChange={(event) => {
+            setSearchTerm(event.target.value);
+          }}
+        />
       </div>
 
       <Container className="pokemon-grid-container">
@@ -60,35 +64,39 @@ const PokeList = ({ favHandler, favourites }) => {
         >
           {isLoading && <Loader />}
           {!isLoading &&
-
-            pokemons.filter((pokemon, index) => {
-                if(searchTerm === ""){
-                return pokemon;
-            } 
-            else if (pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()))
-
-                return pokemon
-            }).map((pokemon) => (
-              <PokeCard
-                key={pokemon.name}
-                id={pokemon.id}
-                name={pokemon.name}
-                image={pokemon.sprites.other.dream_world.front_default}
-                type={pokemon.types[0].type.name}
-                // {pokemon.sprites.other.home.front_default}
-                pokemonName={pokemon.name}
-                fav={favourites ? favourites.some(item => item.name === pokemon.name): 'favourites is empy'}
-                favClick={() => favHandler(pokemon)}
-              />
-            ))}
+            pokemons
+              .filter((pokemon, index) => {
+                if (searchTerm === "") {
+                  return pokemon;
+                } else if (
+                  pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
+                )
+                  return pokemon;
+              })
+              .map((pokemon) => (
+                <PokeCard
+                  key={pokemon.name}
+                  id={pokemon.id}
+                  name={pokemon.name}
+                  image={pokemon.sprites.other.dream_world.front_default}
+                  type={pokemon.types[0].type.name}
+                  // {pokemon.sprites.other.home.front_default}
+                  pokemonName={pokemon.name}
+                  fav={
+                    favourites
+                      ? favourites.some((item) => item.name === pokemon.name)
+                      : "favourites is empy"
+                  }
+                  favClick={() => favHandler(pokemon)}
+                />
+              ))}
         </Row>
       </Container>
       <div className="load-btn m-5">
         <Button variant="danger" onClick={getPokemons}>
-        Load more
-      </Button>
+          Load more
+        </Button>
       </div>
-      
     </div>
   );
 };
