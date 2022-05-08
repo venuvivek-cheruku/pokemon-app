@@ -71,6 +71,7 @@ const PokeList = ({ favHandler, favourites }) => {
             }).map((pokemon) => (
               <PokeCard
                 key={pokemon.name}
+                id={pokemon.id}
                 name={pokemon.name}
                 image={pokemon.sprites.other.dream_world.front_default}
                 type={pokemon.types[0].type.name}
@@ -82,9 +83,12 @@ const PokeList = ({ favHandler, favourites }) => {
             ))}
         </Row>
       </Container>
-      <Button variant="primary" size="lg" onClick={getPokemons}>
+      <div className="load-btn m-5">
+        <Button variant="danger"  size="lg" onClick={getPokemons}>
         Load more
       </Button>
+      </div>
+      
     </div>
   );
 };

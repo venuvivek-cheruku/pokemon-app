@@ -4,10 +4,10 @@ import Card from "react-bootstrap/Card";
 import { LinkContainer } from "react-router-bootstrap";
 import { Heart, HeartFill } from 'react-bootstrap-icons';
 
-const PokeCard = ({ name, image, pokemonName, type, fav, favClick  }) => {
+const PokeCard = ({ id, name, image, pokemonName, type, fav, favClick  }) => {
   return (
     <Card bg="dark" text="light" key={name}>
-      <Card.Header className="d-flex justify-content-between text-capitalise">{name} 
+      <Card.Header className="d-flex justify-content-between text-capitalise"> #{id}  {name} 
         {fav ? (
           <HeartFill onClick={favClick} color="red" />
         ): (

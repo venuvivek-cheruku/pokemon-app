@@ -47,11 +47,17 @@ text-transform: capitalize;
 
 .details-btn{
     display: block;
+}
 
+.load-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pokemon-type{
     text-align: center;
     background-color: black;
     text-transform: capitalize;
+    font-size: 0.9rem;
 }
