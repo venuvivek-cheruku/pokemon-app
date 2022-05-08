@@ -14,9 +14,9 @@ An application to fetch information from the Pokemon API https://pokeapi.co/api/
 
 - Pokelist Tab
 
-  - contains the list of Pokemons, first, it fetches 50 Pokemons at a time from the API. Click to "load more" button to fetch another 50 pokemon and so on.
+  - contains the list of Pokemons, first, it fetches 50 Pokemons from the API at a time of application loads. Click to "load more" button to fetch another 50 Pokemons and so on.
 
-  - search function is used to fetch a particular Pokemon from API.
+  - search function filter and display a particular Pokemon from API.
 
   - "🖤" is a button used to make the Pokemon favourite. All Favourite Pokemons are displayed on the Favourites Tab.
 
