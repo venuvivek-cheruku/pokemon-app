@@ -1,0 +1,31 @@
+.add_color {
+    background-color: rgb(33, 37, 41)
+    !important;
+}
+/* avoid using !important, the next coder will need to overwrite it again... use style guides to import colors */
+
+.poke_type {
+    list-style: none;
+    display: inline;
+}
+
+main {
+    height: calc(100vh - 56px);
+}
+
+.hero {
+    background-color: black;
+    height: 100%;
+    color: white;
+}
+
+.search-bar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+.search-bar-container input{
+    width: 50%;
+}
