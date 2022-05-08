@@ -9,7 +9,8 @@ const PokeCard = ({ id, name, image, pokemonName, type, fav, favClick }) => {
     <Card bg="dark" text="light" key={name}>
       <Card.Header className="d-flex justify-content-between text-capitalise">
         {" "}
-        #{id} {name}
+        <span className="pokecard-id" style={{ 
+          color: "yellow"}}> #{id} </span>{name}
         {fav ? (
           <HeartFill onClick={favClick} color="red" />
         ) : (

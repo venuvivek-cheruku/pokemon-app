@@ -89,3 +89,8 @@ main {
   flex-direction: column;
   align-items: start;
 }
+
+.pokecard-id{
+  color: yellow;
+  font-size: 1rem;
+}

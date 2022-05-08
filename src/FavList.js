@@ -6,13 +6,13 @@ import { Button } from "react-bootstrap";
 const FavList = ({favHandler, favourites, emptyFav }) => {
 
     return (
-        <div>
+        <div style={{backgroundColor: "black", width: "100%", height: "100%"}}>
         <Container>
           <Row
             xs={2}
             md={4}
             lg={5}
-            className="justify-content-between my-5 d-flex gap-3"
+            className="justify-content-between py-5 d-flex gap-3"
           >
             {favourites.map((pokemon) => (
                 <PokeCard
