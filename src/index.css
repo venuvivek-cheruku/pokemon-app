@@ -1,8 +1,4 @@
-.add_color {
-    background-color: rgb(33, 37, 41)
-    !important;
-}
-/* avoid using !important, the next coder will need to overwrite it again... use style guides to import colors */
+
 
 .poke_type {
     list-style: none;

@@ -1,3 +1,49 @@
+## Pokedex APP
+
+An application to fetch information from the Pokemon API https://pokeapi.co/api/v2/pokemon/ to Pokédex. Name of the Pokemon, type/s and picture are rendered in cards.
+
+## Concepts practised:
+
+- react hooks
+- multiple API calls
+- search and filter items from API
+
+## Usage:
+
+- HomePage contains Greetings and NavItems. Pokelist and Favourites
+
+- Pokelist Tab
+
+  - contains the list of Pokemons, first, it fetches 50 Pokemons at a time from the API. Click to "load more" button to fetch another 50 pokemon and so on.
+
+  - search function is used to fetch a particular Pokemon from API.
+
+  - "🖤" is a button used to make the Pokemon favourite. All Favourite Pokemons are displayed on the Favourites Tab.
+
+- Favourites Tab
+
+  - displays all favourite Pokemons which are stored in the localStorage.
+
+  - "Remove all favourites" button removes all existed favourite Pokemons and makes the page empty.
+
+## Built with:
+
+- REACT
+- JXS
+- React Bootstrap
+- axios
+- Pokemon API
+
+## Credits:
+
+- Pokemon API: https://pokeapi.co/api/v2/pokemon/
+
+## ScreenShots:
+
+- ScreenShot-1
+
+- ScreenShot-2
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
